@@ -1,0 +1,5 @@
+name: GDPR Dump
+description: "Provides an API for the GDPR tool. "
+type: module
+package: GDPR
+core: 8.x

@@ -1,0 +1,4 @@
+services:
+  gdpr.dump-expression-collector:
+    class: \Drupal\gdpr_dump\GdprDumpExpressions
+    arguments: ['@module_handler']

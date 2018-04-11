@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_gdpr_dump_expressions() on behalf of user module.
+ *
+ * Note that this does not cover additionally added fields.
+ *
+ * @return array
+ *   An array of sql expressions, keyed by table and column.
+ */
+function gdpr_dump_user_gdpr_dump_expressions() {
+  return [
+    'user_field_data' => [
+      // Copy the primary key to all columns that might carry a unique index.
+      'user' => 'uid',
+      'mail' => 'uid',
+      'init' => 'uid',
+      'pass' => '""',
+    ],
+  ];
+}
