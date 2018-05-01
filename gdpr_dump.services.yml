@@ -1,4 +1,7 @@
 services:
-  gdpr.dump-expression-collector:
-    class: \Drupal\gdpr_dump\GdprDumpExpressions
+  gdpr_dump.expression_collector:
+    class: \Drupal\gdpr_dump\ExpressionCollector
     arguments: ['@module_handler']
+  gdpr_dump.expression_helper:
+    class: \Drupal\gdpr_dump\ExpressionHelper
+    arguments: ['@entity_type.bundle.info', '@entity_field.manager', '@typed_data_manager]

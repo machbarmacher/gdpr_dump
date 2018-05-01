@@ -9,13 +9,16 @@
  *   An array of sql expressions, keyed by table and column.
  */
 function gdpr_dump_user_gdpr_dump_expressions() {
-  return [
-    'user_field_data' => [
-      // Copy the primary key to all columns that might carry a unique index.
-      'user' => 'uid',
-      'mail' => 'uid',
-      'init' => 'uid',
-      'pass' => '""',
-    ],
+  $expressions['user_field_data'] = [
+    // Copy the primary key to all columns that might carry a unique index.
+    'user' => 'uid',
+    'mail' => 'uid',
+    'init' => 'uid',
+    'pass' => '""',
   ];
+  /** @var \Drupal\gdpr_dump\ExpressionHelper $helper */
+  $helper = \Drupal::service('gdpr_dump.expression_helper');
+  $expressions += $helper->getFieldExpressions('user');
+  return $expressions;
 }
+

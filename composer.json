@@ -1,0 +1,16 @@
+{
+    "name": "drupal/gdpr_dump",
+    "description": "Provides an API for drush modules to declare how DB columns must be dumped in GDPR-compliant dumps.",
+    "type": "drupal-module",
+    "require": {
+        "machbarmacher/gdpr-dump": "dev-master"
+    },
+    "license": "GPL-2.0-or-higher",
+    "authors": [
+        {
+            "name": "Axel Rutz",
+            "email": "axel.rutz@machbarmacher.net"
+        }
+    ],
+    "minimum-stability": "dev"
+}

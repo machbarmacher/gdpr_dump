@@ -2,7 +2,7 @@
 
 namespace Drupal\gdpr_dump;
 
-class GdprDumpExpressionCollector implements GdprDumpExpressionCollectorInterface {
+class ExpressionCollector implements ExpressionCollectorInterface {
 
   /** @var \Drupal\Core\Extension\ModuleHandlerInterface */
   private $moduleHandler;

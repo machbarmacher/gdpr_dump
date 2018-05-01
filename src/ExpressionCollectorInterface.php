@@ -2,7 +2,7 @@
 
 namespace Drupal\gdpr_dump;
 
-interface GdprDumpExpressionCollectorInterface {
+interface ExpressionCollectorInterface {
   /**
    * @return array
    */
