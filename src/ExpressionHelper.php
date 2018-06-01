@@ -53,7 +53,7 @@ class ExpressionHelper {
           // We're hardcoding this here as the API does not expose this.
           $sqlColumn = "{$fieldName}_{$column}";
           // @todo Better use field storage definitions.
-          $sqlValue = (is_int($value) || is_float($value)) ? (string) $value : "'$value";
+          $sqlValue = (is_int($value) || is_float($value)) ? (string) $value : "'$value'";
           // Revision table expressons get silently ignored if not applicable.
           $sqlTables = ["{$entityTypeId}__{$fieldName}", "{$entityTypeId}_revision__{$fieldName}"];
           foreach ($sqlTables as $sqlTable) {
